@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown</title>
+    <!--  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.33.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body class="bg-[#242B2E] h-[100vh]">
+    <div class="flex flex-col justify-center items-center">
+      <h3
+        class="text-[#fff] text-[64px] flex items-center justify-center mt-[100px]"
+      >
+        Countdown
+      </h3>
+      <div
+        class="text-[#fff] text-[64px] flex items-center justify-center mt-[200px]"
+      >
+        <input
+          type="text"
+          placeholder="Type here"
+          value="0"
+          class="input input-ghost w-full max-w-xs"
+          id="num"
+        />
+      </div>
+      <button
+        class="btn btn-outline btn-info w-[180px] h-[70px] mx-[20px] mt-[70px]"
+        onclick="start()"
+      >
+        Start
+      </button>
+    </div>
+    <!--  -->
+    <script src="./script.js"></script>
+  </body>
+</html>
