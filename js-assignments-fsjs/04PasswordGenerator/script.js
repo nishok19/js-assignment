@@ -18,11 +18,22 @@ const randomFunc = {
   symbol: getRandomSymbol,
 };
 
-clipboardEl.addEventListener("click", () => {});
+clipboardEl.addEventListener("click", () => {
+  const txt = resultEl.innerText;
+  console.log("clipboard, ", txt);
+  navigator.clipboard.writeText(txt).then(() => {
+    // result.innerText = "Copied to Clipboard!!!";
+    // txtbox.value = "";
+    // setTimeout(() => {
+    // result.innerText = "";
+    // }, 2000);
+  });
+});
 
 generateEl.addEventListener("click", () => {
   let pwd = generatePassword(lengthEl.value);
   console.log("passssss... ", pwd);
+  resultEl.innerText = pwd;
 });
 
 function generatePassword(length) {
