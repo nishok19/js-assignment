@@ -4,11 +4,9 @@ const inputEl = document.querySelector("#input");
 const qr = document.querySelector("#qr");
 
 const url = "https://qrcode3.p.rapidapi.com/qrcode/text";
-let text = "";
 const KEY = "KEY";
 
 subBtnEl.addEventListener("click", async () => {
-  //   text = inputEl.value.replace(" ", "").trim();
   console.log("text", text);
   inputEl.value
     ? await fetch(url, {
@@ -30,7 +28,6 @@ subBtnEl.addEventListener("click", async () => {
 
           imgEl.style.display = "block";
           imgEl.src = URL.createObjectURL(res);
-          //   qr.innerHTML = `<image src=${URL.createObjectURL(res)} alt="qr" />`;
           inputEl.value = "";
           console.log("first");
         })
